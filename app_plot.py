@@ -60,8 +60,8 @@ def plot_regression(train_file, test_file):
     plt.title(title, fontsize=14)
 
     # Labels
-    plt.xlabel('Output0')
-    plt.ylabel('Target0')
+    plt.xlabel('Predicted UCS (kPa)')
+    plt.ylabel('Actual UCS (kPa)')
 
     # Display legend
     plt.legend()
