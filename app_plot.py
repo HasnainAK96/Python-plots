@@ -50,11 +50,11 @@ def plot_regression(train_file, test_file):
     sns.set(style="white")  # Set white background and no grid
     plt.figure(figsize=(8, 6))
 
-    # Plot the training data regression plot
-    sns.regplot(x='Output0', y='Target0', data=train_df, scatter_kws={'s': 50, 'color': 'blue'}, line_kws={'color': 'red'}, label="Training Data")
+    # Plot the training data regression plot without the shaded bands
+    sns.regplot(x='Output0', y='Target0', data=train_df, scatter_kws={'s': 50, 'color': 'blue'}, line_kws={'color': 'red'}, fit_reg=True, ci=None, label="Training Data")
 
-    # Plot the testing data regression plot
-    sns.regplot(x='Output0', y='Target0', data=test_df, scatter_kws={'s': 50, 'color': 'green'}, line_kws={'color': 'orange'}, label="Testing Data")
+    # Plot the testing data regression plot without the shaded bands
+    sns.regplot(x='Output0', y='Target0', data=test_df, scatter_kws={'s': 50, 'color': 'green'}, line_kws={'color': 'orange'}, fit_reg=True, ci=None, label="Testing Data")
 
     # Set the title with error metrics
     plt.title(title, fontsize=14)
